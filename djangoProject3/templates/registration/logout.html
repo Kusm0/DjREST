@@ -1,0 +1,13 @@
+<!-- Файл: templates/registration/logout.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Вийти{% endblock %}
+
+{% block content %}
+  <h2>Вийти</h2>
+  <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Вийти</button>
+  </form>
+{% endblock %}

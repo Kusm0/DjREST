@@ -1,0 +1,16 @@
+<!-- Файл: templates/view_reservations.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Мої бронювання</h2>
+  <ul>
+    {% for reservation in reservations %}
+      <li>
+        {{ reservation.auditorium.number }} - {{ reservation.start_time }} ({{ reservation.duration }} годин)
+        <a href="{% url 'edit_reservation' reservation.id %}">Редагувати</a>
+        <a href="{% url 'cancel_reservation' reservation.id %}">Скасувати</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,56 @@
+/* Файл: static/css/styles.css */
+
+/* Загальні стилі для всіх сторінок */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Стилі для блока аутентифікації */
+#auth-links {
+    text-align: right;
+    padding: 10px;
+}
+
+#auth-links a {
+    margin-left: 10px;
+    color: #4CAF50;
+}
+
+/* Стилі для форм та інших елементів за потребою */

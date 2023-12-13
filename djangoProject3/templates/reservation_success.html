@@ -1,0 +1,11 @@
+<!-- Файл: templates/reservation_success.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Успішна резервація{% endblock %}
+
+{% block content %}
+  <h2>Ваше бронювання пройшло успішно!</h2>
+  <p>Дякуємо за вибір нашого сервісу.</p>
+  <p><a href="{% url 'available_auditoriums' %}">Повернутися на головну сторінку</a></p>
+{% endblock %}

@@ -1,0 +1,15 @@
+<!-- Файл: templates/edit_reservation.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Редагування бронювання{% endblock %}
+
+{% block content %}
+  <h2>Редагувати бронювання</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Зберегти зміни</button>
+  </form>
+  <a href="{% url 'view_reservations' %}">Відміна</a>
+{% endblock %}

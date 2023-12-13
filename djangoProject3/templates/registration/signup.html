@@ -1,0 +1,14 @@
+<!-- Файл: templates/registration/signup.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Реєстрація{% endblock %}
+
+{% block content %}
+  <h2>Реєстрація</h2>
+  <form method="post" action="{% url 'signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Зареєструватися</button>
+  </form>
+{% endblock %}

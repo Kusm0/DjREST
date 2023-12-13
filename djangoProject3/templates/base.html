@@ -1,0 +1,47 @@
+<!-- Файл: templates/base.html -->
+
+<!-- Додаємо блок для посилань на вхід/вихід -->
+
+
+{% block auth_links %}
+  {% if user.is_authenticated %}
+    <a href="{% url 'logout' %}">Вийти</a>
+  {% else %}
+    <a href="{% url 'login' %}">Увійти</a>
+    <a href="{% url 'signup' %}">Зареєструватися</a>
+  {% endif %}
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="uk">
+    <title>{% block title %}Reserv App{% endblock %}</title>
+
+
+</head>
+<body>
+    <header>
+        <h1>{% block header %}My Reservation App{% endblock %}</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'available_auditoriums' %}">Доступні аудиторії</a></li>
+                <li><a href="{% url 'reserve_auditorium' %}">Бронювання аудиторії</a></li>
+                <li><a href="{% url 'view_reservations' %}">Мої бронювання</a></li>
+                <!-- Додайте інші посилання за потребою -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Reservation App</p>
+    </footer>
+</body>
+</html>

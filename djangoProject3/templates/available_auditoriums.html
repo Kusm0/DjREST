@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Доступні аудиторії</h2>
+
+  <ul>
+    {% for auditorium in available_auditoriums %}
+      <li>{{ auditorium.number }} - {{ auditorium.name }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

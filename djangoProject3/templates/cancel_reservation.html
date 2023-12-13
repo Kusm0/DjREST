@@ -1,0 +1,15 @@
+<!-- Файл: templates/cancel_reservation.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Скасування бронювання{% endblock %}
+
+{% block content %}
+  <h2>Скасувати бронювання</h2>
+  <p>Ви впевнені, що хочете скасувати бронювання?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button type="submit">Підтвердити скасування</button>
+  </form>
+  <a href="{% url 'view_reservations' %}">Відміна</a>
+{% endblock %}
